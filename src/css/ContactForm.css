@@ -1,0 +1,132 @@
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    /* background-color: #fdf8f2; */
+  }
+  
+  /* Información de contacto */
+  .contact-info {
+    width: 40%;
+    padding: 20px;
+    /* background-color: #fff3e5; */
+    border-radius: 10px;
+  }
+  
+  .contact-info h2 {
+    color: #00114b;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .contact-info a {
+    color: #f36c21;
+    text-decoration: underline;
+  }
+  
+  .contact-details {
+    margin-top: 20px;
+  }
+  
+  .contact-email,
+  .contact-phone {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .contact-email span,
+  .contact-phone span {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #f36c21;
+  }
+  
+  /* Formulario de contacto */
+  .contact-form {
+    width: 55%;
+    padding-left: 40px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .submit-button {
+    background-color: #f36c21;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .submit-button:hover {
+    background-color: #ff944d;
+  }
+  
+  /* Media queries para hacerlo responsive */
+  
+  /* Para pantallas más pequeñas (tablets y móviles) */
+  @media screen and (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .contact-info,
+    .contact-form {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .contact-form {
+      padding-top: 30px;
+    }
+  
+    .contact-info {
+      margin-bottom: 30px;
+    }
+  }
+  
+  /* Para pantallas muy pequeñas (móviles) */
+  @media screen and (max-width: 480px) {
+    .contact-info p, .contact-email, .contact-phone {
+      font-size: 12px;
+    }
+  
+    .contact-info h2 {
+      font-size: 20px;
+    }
+  
+    .submit-button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+  
