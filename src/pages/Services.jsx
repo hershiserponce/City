@@ -6,51 +6,48 @@ import "../css/Services.css";
 
 const servicesData = [
   {
-    title: "Custom Services",
+    title: "Servicios personalizados",
     items: [
-      "Personal Community Manager",
-      "CC&R Enforcement",
-      "Common Area Monitoring",
-      "Legal Review",
-      "Document Review",
-      "Board Training Workshops",
-      "Vendor Management",
-      "24/7 Emergency Assistance",
+      "Gestor de comunidad personal",
+      "Cumplimiento de CC&R",
+      "Monitoreo de áreas comunes",
+      "Revisión legal",
+      "Revisión de documentos",
+      "Talleres de capacitación de la junta directiva",
+      "Gestión de proveedores",
+      "Asistencia de emergencia 24 horas al día, 7 días a la semana",
     ],
     icon: "🛠️",
   },
   {
-    title: "In-House Accounting",
+    title: "Contabilidad interna",
     items: [
-      "Dedicated Community Accountant",
-      "Accounts Receivable",
-      "Accounts Payable",
-      "24/7 Accounting Report Access",
-      "Online Bill Pay",
-      "FDIC Insured Funds",
+      "Contador comunitario dedicado",
+      "Cuentas por cobrar",
+      "Cuentas por pagar",
+      "Acceso a informes contables 24 horas al día, 7 días a la semana",
+      "Pago de facturas en línea",
     ],
     icon: "💼",
   },
   {
-    title: "In-House Collections",
+    title: "Colecciones internas",
     items: [
-      "Dedicated Collections Manager",
-      "Facilitating Payments Plans",
-      "Lien Filing",
-      "Board Collection Workshops",
-      "Small Claims Administration",
+      "Gerente de Cobranzas Dedicado",
+      "Planes de facilitación de pagos",
+      "Administración de reclamos menores",
     ],
     icon: "💰",
   },
   {
-    title: "Real-Time Technology",
+    title: "Tecnología en tiempo real",
     items: [
-      "CITYSYNC™ Web Portal",
-      "Instant Date Transfer",
-      "24/7 Access to Reporting",
-      "Real-Time Inspection Reports",
-      "Compliance Photos",
-      "CITYLINK Mobile App",
+      "Portal web CITYSYNC™",
+      "Transferencia de fecha instantánea",
+      "Acceso a informes las 24 horas, los 7 días de la semana",
+      "Informes de inspección en tiempo real",
+      "Fotos de cumplimiento",
+      "Aplicación móvil CITYLINK",
     ],
     icon: "⏱️",
   },
@@ -68,7 +65,7 @@ export const Services = () => {
             Descubra el valor de nuestro soporte dedicado y tecnología
             innovadora.
           </h1>
-          <button className="quote-button">GET A QUOTE</button>
+          <button className="quote-button">OBTENGA UNA COTIZACIÓN</button>
         </div>
         <div className="image-section">
           <img src={CONDOMINIO} alt="Graph presentation" />
@@ -86,7 +83,7 @@ export const Services = () => {
             operaciones en Costa Rica desde el año 2010 como Compañía dedicada
             al Corretaje de Bienes Raíces, Administración y Mantenimiento de
             Condominios, respaldada por más de 40 años de práctica aplicada, lo
-            que nos asegura ofrecer un servicio de calidad
+            que nos asegura ofrecer un servicio de calidad.
           </p>
         </div>
       </div>
@@ -107,7 +104,7 @@ export const Services = () => {
             </div>
           ))}
           <div className="get-started3">
-            <button>Get Started with CITY</button>
+            <button>Comience a Utilizar CITY</button>
           </div>
         </div>
       </div>

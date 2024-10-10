@@ -21,29 +21,23 @@ export const About = () => {
 
       <div className="container">
         <p>Objetivos</p>
-        <span>
-          Procuramos el mejor servicio de administración de condominios de
-          manera integral y personalizada, satisfaciendo los requerimientos de
-          nuestros clientes, aplicando los principios, conceptos y prácticas de
-          la Gestión de Calidad Total en todo lo que hacemos.
-        </span>
-        <span>
-          Fomentamos relaciones de confianza y cooperación técnica con nuestros
-          clientes y proveedores, para mejorar continuamente la calidad de
-          nuestros servicios.
-        </span>
-        <span>
-          Buscamos estándares de productividad y eficiencia que nos permitan
-          asegurar la solidez y el crecimiento de nuestro negocio.
-        </span>
-        <span>
-          Practicamos el mejoramiento continuo en nuestros procesos para
-          satisfacer las necesidades y expectativas de nuestros clientes.
-        </span>
-        <span>
-          Mantenemos coherencia con las normas éticas, legales y
-          medioambientales.
-        </span>
+        <ul>
+  <li>
+    Procuramos el mejor servicio de administración de condominios de manera integral y personalizada, satisfaciendo los requerimientos de nuestros clientes, aplicando los principios, conceptos y prácticas de la Gestión de Calidad Total en todo lo que hacemos.
+  </li>
+  <li>
+    Fomentamos relaciones de confianza y cooperación técnica con nuestros clientes y proveedores, para mejorar continuamente la calidad de nuestros servicios.
+  </li>
+  <li>
+    Buscamos estándares de productividad y eficiencia que nos permitan asegurar la solidez y el crecimiento de nuestro negocio.
+  </li>
+  <li>
+    Practicamos el mejoramiento continuo en nuestros procesos para satisfacer las necesidades y expectativas de nuestros clientes.
+  </li>
+  <li>
+    Mantenemos coherencia con las normas éticas, legales y medioambientales.
+  </li>
+</ul>
       </div>
     </>
   );
