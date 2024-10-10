@@ -1,20 +1,17 @@
 import { Route, Routes } from "react-router-dom";
 
-import { AllPets } from "../pages/AllPets";
-import { Dogs } from "../pages/Dogs";
-import { Cats } from "../pages/Cats";
-import { Rubbits } from "../pages/Rubbits";
-import { Biros } from "../pages/Biros";
+import { Home } from "../pages/Home";
+import {About} from '../pages/About'
+import {Contact} from '../pages/Contact'
+
 
 export const RoutesAnimals = () => {
   return (
     <>
         <Routes>
-          <Route path="/" element={<AllPets />} />
-          <Route path="dogs" element={<Dogs />} />
-          <Route path="cats" element={<Cats />} />
-          <Route path="rubbits" element={<Rubbits />} />
-          <Route path="birds" element={<Biros />} />
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
         </Routes>
     </>
   );
