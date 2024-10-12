@@ -2,6 +2,8 @@ import "../css/ContactForm.css";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Contact = () => {
   const formik = useFormik({
@@ -37,7 +39,8 @@ export const Contact = () => {
           () => {
             // console.log(result.text);
             // console.log("valores enviados",values);
-            alert('Mensaje enviado con éxito');
+            // alert('Mensaje enviado con éxito');
+            toast.success('Mensaje Enviado Exitosamente ');
             resetForm();
           },
           (error) => {
@@ -153,6 +156,9 @@ export const Contact = () => {
           Enviar mensaje ahora
         </button>
       </form>
+
+      <ToastContainer className="toast-center" position="top-center" autoClose={3000} />
+
     </div>
       </div>
     </>
