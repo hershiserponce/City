@@ -45,7 +45,7 @@ export const Contact = () => {
           },
           (error) => {
             console.log(error.text);
-            alert('Hubo un error al enviar el mensaje');
+            toast.error('Hubo un error al enviar el mensaje');
           }
         );
     },
