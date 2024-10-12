@@ -76,21 +76,27 @@
     font-size: 14px;
   }
   
-  .submit-button {
-    background-color: #f36c21;
+  .quote-button {
+    background: linear-gradient(90deg, #f36c21 0%, #f3b021 100%);
     color: white;
-    padding: 12px 20px;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
   }
-  
-  .submit-button:hover {
-    background-color: #ff944d;
+
+  .quote-button:hover {
+    background: linear-gradient(90deg, #f36c21 100%, #f3b021 0%);
   }
-  
   /* Media queries para hacerlo responsive */
+
+  @media screen and (max-width: 480px) {
+    .quote-button {
+      padding: 12px 20px;
+      font-size: 12px;
+    }
+  }
   
   /* Para pantallas más pequeñas (tablets y móviles) */
   @media screen and (max-width: 768px) {
@@ -122,12 +128,6 @@
   
     .contact-info h2 {
       font-size: 20px;
-    }
-  
-    .submit-button {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
     }
   }
   

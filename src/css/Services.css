@@ -42,7 +42,7 @@
     cursor: pointer;
     font-size: 14px;
   }
-  
+   
   .quote-button:hover {
     background: linear-gradient(90deg, #f36c21 100%, #f3b021 0%);
   }

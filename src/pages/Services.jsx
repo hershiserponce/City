@@ -1,8 +1,7 @@
-// import { animals } from "../assets/data";
-// import { AdoptionAnimals } from "../components/AdoptionAnimals";
-// import { Slider } from "../components/Slider";
+
 import CONDOMINIO from "../assets/CONDOMINIO.JPG";
 import "../css/Services.css";
+import { useNavigate } from 'react-router-dom'
 
 const servicesData = [
   {
@@ -54,6 +53,12 @@ const servicesData = [
 ];
 
 export const Services = () => {
+
+  const navigate = useNavigate();
+
+  const handleClick = () =>{
+    navigate('/Contact')
+  }
   return (
     <>
       {/* <p>estoy en home</p> */}
@@ -65,7 +70,7 @@ export const Services = () => {
             Descubra el valor de nuestro soporte dedicado y tecnología
             innovadora.
           </h1>
-          <button className="quote-button">OBTENGA UNA COTIZACIÓN</button>
+          <button onClick={handleClick} className="quote-button">OBTENGA UNA COTIZACIÓN</button>
         </div>
         <div className="image-section">
           <img src={CONDOMINIO} alt="Graph presentation" />
@@ -103,9 +108,9 @@ export const Services = () => {
               </ul>
             </div>
           ))}
-          <div className="get-started3">
-            <button>Comience a Utilizar CITY</button>
-          </div>
+          
+            <button className="quote-button" onClick={handleClick}>Comience a Utilizar CITY</button>
+          
         </div>
       </div>
     </>

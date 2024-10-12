@@ -1,9 +1,52 @@
-// import { Slider } from "../components/Slider";
-// import { animals } from "../assets/data";
-// import { AdoptionAnimals } from "../components/AdoptionAnimals";
 import "../css/ContactForm.css";
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      phone: '',
+      community: '',
+      address: '',
+      message: '',
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required('El nombre es obligatorio'),
+      email: Yup.string().email('Correo inválido').required('El correo electrónico es obligatorio'),
+      community: Yup.string().required('El nombre de la comunidad es obligatorio'),
+      address: Yup.string().required('La dirección es obligatoria'),
+      message: Yup.string().required('El mensaje es obligatorio'),
+    }),
+    onSubmit: (values, { resetForm }) => {
+      const templateParams = {
+        ...values, // Incluye los valores del formulario
+        reply_to: values.email, // Agrega el correo del remitente aquí
+      };
+
+      emailjs
+        .send(
+          'service_ekqy3tt',  // Reemplaza con tu Service ID
+          'template_28vrbql',  // Reemplaza con tu Template ID
+          templateParams,
+          '2Id_97h0s2JhS6uEm',    // Reemplaza con tu Public Key
+        )
+        .then(
+          () => {
+            // console.log(result.text);
+            // console.log("valores enviados",values);
+            alert('Mensaje enviado con éxito');
+            resetForm();
+          },
+          (error) => {
+            console.log(error.text);
+            alert('Hubo un error al enviar el mensaje');
+          }
+        );
+    },
+  });
   return (
     <>
       <div className="contact-container">
@@ -36,42 +79,81 @@ export const Contact = () => {
 
         {/* Formulario de contacto */}
         <div className="contact-form">
-          <form>
-            <div className="form-group">
-              <label htmlFor="name">Name*</label>
-              <input type="text" id="name" required />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="email">Email*</label>
-              <input type="email" id="email" required />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="phone">Phone Number</label>
-              <input type="tel" id="phone" />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="community">Community Name*</label>
-              <input type="text" id="community" required />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="address">Address*</label>
-              <input type="text" id="address" required />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">Message*</label>
-              <textarea id="message" rows="5" required></textarea>
-            </div>
-
-            <button type="submit" className="submit-button">
-              Send Message Now
-            </button>
-          </form>
+      <form onSubmit={formik.handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="name">Nombre*</label>
+          <input
+            type="text"
+            id="name"
+            {...formik.getFieldProps('name')}
+          />
+          {formik.touched.name && formik.errors.name ? (
+            <div className="error">{formik.errors.name}</div>
+          ) : null}
         </div>
+
+        <div className="form-group">
+          <label htmlFor="email">Correo electrónico*</label>
+          <input
+            type="email"
+            id="email"
+            {...formik.getFieldProps('email')}
+          />
+          {formik.touched.email && formik.errors.email ? (
+            <div className="error">{formik.errors.email}</div>
+          ) : null}
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="phone">Número de teléfono</label>
+          <input
+            type="tel"
+            id="phone"
+            {...formik.getFieldProps('phone')}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="community">Nombre de la comunidad*</label>
+          <input
+            type="text"
+            id="community"
+            {...formik.getFieldProps('community')}
+          />
+          {formik.touched.community && formik.errors.community ? (
+            <div className="error">{formik.errors.community}</div>
+          ) : null}
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="address">DIRECCIÓN*</label>
+          <input
+            type="text"
+            id="address"
+            {...formik.getFieldProps('address')}
+          />
+          {formik.touched.address && formik.errors.address ? (
+            <div className="error">{formik.errors.address}</div>
+          ) : null}
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="message">Mensaje*</label>
+          <textarea
+            id="message"
+            rows="5"
+            {...formik.getFieldProps('message')}
+          ></textarea>
+          {formik.touched.message && formik.errors.message ? (
+            <div className="error">{formik.errors.message}</div>
+          ) : null}
+        </div>
+
+        <button className="quote-button" type="submit">
+          Enviar mensaje ahora
+        </button>
+      </form>
+    </div>
       </div>
     </>
   );
