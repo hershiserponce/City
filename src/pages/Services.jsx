@@ -1,5 +1,5 @@
 
-import CONDOMINIO from "../assets/CONDOMINIO.JPG";
+import CONDOMINIO from "../assets/CONDOMINIO.PNG";
 import "../css/Services.css";
 import { useNavigate } from 'react-router-dom'
 

@@ -89,6 +89,11 @@
   .quote-button:hover {
     background: linear-gradient(90deg, #f36c21 100%, #f3b021 0%);
   }
+
+  .error{
+    color: red;
+    font-size: 0.8rem;
+  }
   /* Media queries para hacerlo responsive */
 
   @media screen and (max-width: 480px) {
