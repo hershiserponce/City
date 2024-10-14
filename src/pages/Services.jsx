@@ -60,7 +60,7 @@ export const Services = () => {
     navigate('/Contact')
   }
   return (
-    <>
+    <div id="Services" className="Services">
       {/* <p>estoy en home</p> */}
 
       <div className="services-container">
@@ -113,6 +113,6 @@ export const Services = () => {
           
         </div>
       </div>
-    </>
+    </div>
   );
 };

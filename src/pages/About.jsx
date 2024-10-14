@@ -5,7 +5,7 @@ import "../css/About_Us.css"
 
 export const About = () => {
   return (
-    <>
+    <div id="About" className="About">
       <div className="container">
         <p>¿Quiénes Somos?</p>
         <span>
@@ -18,6 +18,7 @@ export const About = () => {
           experiencia en administración de Condominios.
         </span>
       </div>
+     
 
       <div className="container">
         <p>Objetivos</p>
@@ -39,6 +40,6 @@ export const About = () => {
   </li>
 </ul>
       </div>
-    </>
+    </div>
   );
 };

@@ -51,7 +51,7 @@ export const Contact = () => {
     },
   });
   return (
-    <>
+    <div id="Contact" className="Contact">
       <div className="contact-container">
         {/* Sección de información de contacto */}
         <div className="contact-info">
@@ -161,6 +161,6 @@ export const Contact = () => {
 
     </div>
       </div>
-    </>
+    </div>
   );
 };
