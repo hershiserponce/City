@@ -1,7 +1,7 @@
 
 import CONDOMINIO from "../assets/CONDOMINIO.PNG";
 import "../css/Services.css";
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 
 const servicesData = [
   {
@@ -54,11 +54,11 @@ const servicesData = [
 
 export const Services = () => {
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleClick = () =>{
-    navigate('/Contact')
-  }
+  // const handleClick = () =>{
+  //   navigate('/Contact')
+  // }
   return (
     <div id="Services" className="Services">
       {/* <p>estoy en home</p> */}
@@ -70,7 +70,9 @@ export const Services = () => {
             Descubra el valor de nuestro soporte dedicado y tecnología
             innovadora.
           </h1>
-          <button onClick={handleClick} className="quote-button">OBTENGA UNA COTIZACIÓN</button>
+          {/* <button onClick={handleClick} className="quote-button">OBTENGA UNA COTIZACIÓN</button> */}
+          <a  className="quote-button" href="#Contact">OBTENGA UNA COTIZACIÓN</a>
+
         </div>
         <div className="image-section">
           <img src={CONDOMINIO} alt="Graph presentation" />
@@ -109,7 +111,7 @@ export const Services = () => {
             </div>
           ))}
           
-            <button className="quote-button" onClick={handleClick}>Comience a Utilizar CITY</button>
+            <a  className="quote-button" href="#Contact">Comience a Utilizar CITY</a>
           
         </div>
       </div>

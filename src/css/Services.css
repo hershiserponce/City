@@ -35,7 +35,7 @@
   
   .quote-button {
     background: linear-gradient(90deg, #f36c21 0%, #f3b021 100%);
-    color: white;
+    color: white !important;
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
@@ -46,6 +46,7 @@
    
   .quote-button:hover {
     background: linear-gradient(90deg, #f36c21 100%, #f3b021 0%);
+    color: white !important;
   }
   
   /* Sección de la imagen */
