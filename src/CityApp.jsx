@@ -1,4 +1,4 @@
-import { RoutesAnimals } from "./routes/RoutesAnimals";
+import { RoutesPage } from "./routes/RoutesPage";
 import {Navbar} from "./components/Navbar"
 
 export const CityApp = () => {
@@ -7,7 +7,7 @@ export const CityApp = () => {
    
       <div className="containerApp">
        <Navbar />
-      <RoutesAnimals /> 
+      <RoutesPage /> 
       </div>
     </>
   );
