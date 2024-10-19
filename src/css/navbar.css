@@ -24,6 +24,12 @@ a:hover{
 .nav-links {
     display: flex;
     gap: 20px;
+
+    color: #999;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
 }
   
 .nav-link {
