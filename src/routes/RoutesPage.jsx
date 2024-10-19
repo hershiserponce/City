@@ -5,7 +5,7 @@ import {About} from '../pages/About'
 import {Contact} from '../pages/Contact'
 
 
-export const RoutesAnimals = () => {
+export const RoutesPage = () => {
   return (
     <>
         <Routes>
