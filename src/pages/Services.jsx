@@ -1,5 +1,5 @@
 
-import CONDOMINIO from "../assets/CONDOMINIO.PNG";
+import CONDOMINIO from "../assets/CONDOMINIO.png";
 import "../css/Services.css";
 import { useNavigate } from 'react-router-dom'
 
@@ -17,7 +17,7 @@ const servicesData = [
       "Asistencia de emergencia 24 horas al día, 7 días a la semana",
     ],
     icon: "🛠️",
-  },
+  }, 
   {
     title: "Contabilidad interna",
     items: [
