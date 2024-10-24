@@ -1,12 +1,12 @@
 import { NavLink, useLocation } from "react-router-dom";
 import "../css/navbar.css";
-import cityLogo from '../assets/Logo_City_Final_sin_Fondo.png';
+import cityLogo from '../assets/logocity.png';
 
 export const Navbar = () => {
   const { pathname } = useLocation();
   
   return (
-    <nav className="navbar navbar-expand-sm justify-content-around">
+    <nav className="navbar navbar-expand-sm justify-content-around nav-container">
       <div className="logo-container">
         <img src={cityLogo} alt="City Logo" className="city-logo" />
       </div>

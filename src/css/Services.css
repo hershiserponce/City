@@ -24,6 +24,11 @@
     color: #f36c21;
     font-weight: bold;
     margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .services{
+    font-size: 16px !important;
   }
   
   .text-section h1 {
@@ -54,6 +59,10 @@
     align-items: center;
     margin-bottom: 50px;
   }
+
+.imgservices{
+  height: 25rem;
+}
   
   .image-section img {
     width: 100%;
@@ -104,6 +113,12 @@
   
     .image-section img {
       max-width: 300px;
+    }
+
+    .containerimgservicios{
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
   }
   

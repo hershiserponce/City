@@ -1,5 +1,7 @@
 
 import CONDOMINIO from "../assets/CONDOMINIO.png";
+import servicios from "../assets/servicios.jpeg";
+
 import "../css/Services.css";
 import { useNavigate } from 'react-router-dom'
 
@@ -8,13 +10,13 @@ const servicesData = [
     title: "Servicios personalizados",
     items: [
       "Gestor de comunidad personal",
-      "Cumplimiento de CC&R",
+      // "Cumplimiento de CC&R",
       "Monitoreo de áreas comunes",
       "Revisión legal",
       "Revisión de documentos",
       "Talleres de capacitación de la junta directiva",
       "Gestión de proveedores",
-      "Asistencia de emergencia 24 horas al día, 7 días a la semana",
+      "Asistencia de emergencia 24 horas, 7 días a la semana",
     ],
     icon: "🛠️",
   }, 
@@ -26,11 +28,12 @@ const servicesData = [
       "Cuentas por pagar",
       "Acceso a informes contables 24 horas al día, 7 días a la semana",
       "Pago de facturas en línea",
+      "Control de cuentas Bancarias",
     ],
     icon: "💼",
   },
   {
-    title: "Colecciones internas",
+    title: "Cobranza de cuotas condominales",
     items: [
       "Gerente de Cobranzas Dedicado",
       "Planes de facilitación de pagos",
@@ -77,6 +80,22 @@ export const Services = () => {
         </div>
       </div>
 
+      <div style={{paddingTop:"0px", alignItems:"flex-start", }} className="services-container">
+        <div className="text-section">
+          <h4>NUESTROS SERVICIOS</h4>
+          <h1 className="services">
+           City Property Plus® ofrece una variada gama de servicios para que el disfrute del propietario y/o usuario sean toda una excelente experiencia.
+          </h1>
+          
+        </div>
+        <div className="containerimgservicios">
+        <div className="image-section">
+          <img className="imgservices" src={servicios} alt="Graph presentation" />
+        </div>
+        </div>
+       
+      </div>
+
       <div className="container2">
         <div className="services-info">
           <h5>
@@ -103,7 +122,7 @@ export const Services = () => {
               </h3>
               <ul>
                 {service.items.map((item, idx) => (
-                  <li key={idx}>{item}</li>
+                  <li style={{marginBottom:"0px"}} key={idx}>{item}</li>
                 ))}
               </ul>
             </div>
