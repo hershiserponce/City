@@ -214,10 +214,6 @@ flex-direction: column;
     width: 100%;
   }
 
-
-
-
-
   .containerimgservicios {
     width: 100%;
     display: flex;
@@ -234,8 +230,8 @@ flex-direction: column;
   .imgservices {
     width: 100%;
     height: 100%; /* Se adapta al contenedor del slider */
-    /*object-fit: cover;*/ /* Mantiene proporción recortando si es necesario */
-    object-fit: cover;
+    /*object-fit: contain;*/ 
+    object-fit: cover;/* Mantiene proporción recortando si es necesario */
     border-radius: 10px;
   }
   
@@ -254,4 +250,28 @@ flex-direction: column;
     }
   }
 
+
   
+  /* Personalización de las flechas */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: rgba(255, 255, 255, 0.562); /* Cambia el color de las flechas */
+ 
+ 
+}
+
+/* Personalización de los puntos de paginación */
+.swiper-pagination-bullet {
+  background-color: #d3d3d3; /* Color de los puntos inactivos */
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  opacity: 0.6; /* Hace que los puntos inactivos sean un poco translúcidos */
+  transition: background-color 0.3s, opacity 0.3s; /* Suaviza los cambios */
+}
+
+.swiper-pagination-bullet-active{
+  background-color: rgba(255, 255, 255, 0.562) !important; /* Color del punto activo */
+  opacity: 1; /* Punto activo completamente visible */
+  transform: scale(1.2); /* Escala el punto activo para hacerlo más visible */
+}
