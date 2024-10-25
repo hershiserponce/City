@@ -204,3 +204,54 @@
     }
   }
   
+  @media screen and (max-width: 1024px) {
+    .services-container{
+flex-direction: column;
+    }
+  }
+  
+  .containerservicesslider{
+    width: 100%;
+  }
+
+
+
+
+
+  .containerimgservicios {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .image-slider {
+    width: 100%;
+    max-width: 600px; /* Ancho máximo del slider */
+    height: 300px; /* Ajusta la altura del slider según tus necesidades */
+  }
+  
+  .imgservices {
+    width: 100%;
+    height: 100%; /* Se adapta al contenedor del slider */
+    /*object-fit: cover;*/ /* Mantiene proporción recortando si es necesario */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+    .image-slider {
+      max-width: 90%;
+      height: 250px; /* Ajuste de altura en pantallas medianas */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .image-slider {
+      max-width: 100%;
+      height: 200px; /* Ajuste de altura en pantallas pequeñas */
+    }
+  }
+
+  
